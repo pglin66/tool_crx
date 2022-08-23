@@ -1,0 +1,205 @@
+.apt_console {
+    font-size: var(--size-12px);
+    color: var(--fn1);
+    width: 100%;
+    padding: 8px 8px;
+    overflow-y: scroll;
+    height: 100%;
+    background-color: var(--bg2);
+  
+    .svg-duration {
+      margin-left: 20px;
+      fill: #3cc071;
+    }
+    .svg-arrow {
+      fill: #999999;
+    }
+    .Request_Method{
+      margin-right: 5px;
+    }
+    .Request_URL{
+      width: 88%;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+    .log_p {
+      // height: 25px;
+      display: flex;
+      margin-bottom: 8px;
+      line-height: 25px;
+      color: var(--fn1);
+      padding: 0 8px;
+      border-radius: 3px;
+      user-select: text;
+      -moz-user-select: text;
+      -webkit-user-select: text;
+      -ms-user-select: text;
+      & > .api-post-menu-item {
+        margin: 0 !important;
+        padding: 0 !important;
+        .inline-block {
+          padding: 0 !important;
+         
+        }
+      }
+      &.log {
+        background: rgba(255, 255, 255, 0.08);
+      }
+      &.error {
+        background: rgba(255, 76, 76, 0.1);
+      }
+      &.info {
+        background: #d3e0ff3d;
+      }
+      &.warn {
+        background: #f9f6c16c;
+      }
+    }
+    &_dis {
+      display: flex;
+      // align-items: center;
+      justify-content: space-between;
+      // height: 25px;
+      line-height: 25px;
+      overflow-x: hidden;
+      border-radius: 3px;
+      padding: 0 8px;
+      margin-bottom: 8px;
+      div,
+      p,
+      ul,
+      li {
+        user-select: text;
+        -moz-user-select: text;
+        -webkit-user-select: text;
+        -ms-user-select: text;
+      }
+      &.apt_console_logbg {
+        background: rgba(255, 255, 255, 0.08);
+        &:hover {
+          background: rgba(255, 255, 255, 0.08);
+        }
+      }
+      &.apt_console_errorbg {
+        background: rgba(255, 76, 76, 0.1);
+        &:hover {
+          background: rgba(255, 76, 76, 0.1);
+        }
+      }
+      .apt_console_errorbg {
+        color: var(--error);
+      }
+      .apt_console_logbg {
+        color: #3cc071;
+      }
+      .inline-block {
+        white-space: nowrap;
+        width: 100%;
+        padding: 0 !important;
+        span{
+          display: flex;
+          width: 100%;
+          // align-items: center;
+        }
+      }
+    }
+    ul {
+      width: 100%;
+      // padding-left: 30px;
+      li {
+        width: 100%;
+        color: var(--fn1);
+        margin-left: 0 !important;
+        ul {
+          margin-left: 0;
+        }
+        i {
+          font-style: normal;
+        }
+        .apt_console_info {
+          color: #3cc071;
+          margin-left: 8px;
+        }
+      }
+    }
+    svg {
+      vertical-align: sub;
+      margin-right: 5px;
+      min-width: 16px;
+    }
+    &_codeStatus_time {
+      color: var(--background-6);
+    }
+    &_logbg {
+      &:hover {
+        background-color: var(--background-11);
+      }
+    }
+    &_errorbg {
+      &:hover {
+        background-color: var(--backgroup-error);
+      }
+    }
+    &.log {
+      background-color: transparent;
+    }
+    &.error {
+      background-color: #ff4c4c1a;
+      color: #ff4c4c;
+    }
+    &.warn {
+      background-color: #f5b12a34;
+      color: #f5b12a;
+    }
+    &_info {
+      color: var(--background-6);
+    }
+    > span {
+      padding: 0 8px;
+    }
+  }
+  .drag_win {
+    background: var(--bg1);
+    border-bottom: var(--bd1) 1px solid;
+    width: 100vw;
+    height: 26px;
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+    line-height: 26px;
+    text-align: center;
+    // position: fixed;
+    font-size: var(--size-12px);
+    top: 0;
+    left: 0;
+    z-index: 1029;
+    position: relative;
+    color: var(--fn1);
+    .Console_clear{
+      font-size: 12px;
+      padding: 2px 4px;
+      line-height: 1;
+      background-color: var(--bg2);
+      border-radius: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--error);
+      cursor: pointer;
+      -webkit-app-region: no-drag;
+    }
+    .Console_close{
+      width: 14px;
+      height: 14px;
+      background-color: var(--error);
+      border-radius: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      -webkit-app-region: no-drag;
+      &>svg{
+        fill: #fff;
+      }
+    }
+  }
+  

@@ -1,0 +1,126 @@
+/*ApiPost 样式设置文件*/
+:root {
+  /*全局提示*/
+  --error: #ed6a5f;
+  --warning: #f5bf4f;
+  --success: #61c554;
+
+  /*请求颜色*/
+  --method1: #2ba58f;
+  --method2: #df5407;
+  --method3: #3a86ff;
+
+  /*文字色*/
+  --fn1: #ffffff;
+  --fn2: #666666;
+  --fn3: #C4C4C4;
+  --fn4: #287eff;
+  --fn5: rgba(196, 196, 196, 0.3);
+  --fn6: #C4C4C4;
+  --fn7:#3A86FF;
+  --fn8: #3A86FF;
+
+
+  /*背景色*/
+  --bg1:#1A1A1D;
+  --bg2:#222226;
+  --bg3:#27272B;
+  --bg4:#39393D;
+  --bg5:#ffffff;
+  --bg6:#3A86FF;
+  --bg7:#27272B;
+  --bg8:rgba(255, 255, 255, 0.08);
+  --bg9:#222226;
+  --bg10: #1A1A1D;
+  --bg11: #27272B;
+  --bg12:rgba(255, 255, 255, 0.08);
+  --bg13:#1A1A1D;
+  --bg99: #222226;
+  --bg98: #39393D;
+  --split-bar-bg:#363636;
+
+
+  
+
+  /*rgb背景色*/
+  --bgr1: rgba(255, 255, 255, 0.08);
+  --bgr1-hover: rgba(255, 255, 255, 0.12);
+  --bgr2: rgba(255, 255, 255, 0.2);
+  --bgr3: rgba(34, 34, 37, 0.95);
+  --bgr4: rgba(0, 0, 0, 0.5);
+  --bgr5: rgba(39, 39, 43, 0.8);
+  --bgr6: rgba(0, 0, 0, 0.25);
+  --bgr7: rgba(255,255,255, 0.02);
+
+
+  /*边框色*/
+  --bd1:#0C0C0D;
+  --bd2:#18181B;
+  --bd3:#222225;
+  --bd4:#38383C;
+  --bd5:#39393D;
+  --bd6:#0C0C0D;
+  --bd7:#1A1A1D;
+  --bd8:#39393D;
+  /* --bd9:#0C0C0D; */
+  --bd99: #3A86FF;
+
+  --title-color: #666666;
+
+
+
+
+
+
+
+  --login-modal-bg: linear-gradient(180deg, #2f2f31 0%, #222225 100%);
+  --input-border-error: #47272b;
+  --his-right-bg:#27272B;
+  --his-right-bd:#27272B;
+  --clg-bg:#222226;
+  
+  /* 弹窗对应色*/
+  --mfn3:#C4C4C4;
+  --mfn4:#ffffff;
+  --mbg1:#1A1A1D;
+  --mbg2:#222226;
+  --mbg3:#27272B;
+  --mbg4:#27272B;
+  /* 
+  --error: #ff4c4c;
+  --title: #2b2b2b;
+  --title-1: #666666;
+  --title-2: #2BA58F;
+  --title-3: #DF5407;
+  --describe: #C4C4C4;
+  --background-1: #ffeff2;
+  --background-2: #38383C;
+  --background-3: #1759ff;
+  --background-4: #f9f9f9;
+  --background-5: #4e7ffc;
+  --background-6: #16c079;
+  --background-7: #eeeeee;
+  --background-8: #fce4b6;
+  --background-9: #F75B3E;
+  --background-10: #18181B;
+  --background-11:rgba(255, 255, 255, 0.08);
+  --background-14:rgba(34, 34, 37, 0.95);
+  --main: #3a86ff;
+  --main-1: #287eff;
+  --main-2: #fafafa;
+  --main-3: #979797;
+  --border-1: #87a9ff; */
+  /*Api 主题颜色*/
+  /* --background: #222225; */
+  /*Api 主题颜色*/
+  /* --background-12: #18181B; */
+  /*Api 主题颜色*/
+  /* --background-13: #0C0C0D; */
+  /*Api 主题颜色*/
+  /* --border-2: #38383C;
+  --border-3: #2c2c2c; */
+  /*Api 主题颜色*/
+  /* --font-c: #ffffff; */
+  /* resize-line */
+  /* --line-resize:#FFFFFF; */
+}

@@ -1,0 +1,153 @@
+
+.teamlist{
+    width: 328px;
+    color: var(--fn1);
+    .menu-buttom{
+      border-radius: 5px;
+      background-color:var(--bgr1);
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+     
+  }
+  
+    &-header{
+      height: 25px;
+      padding: 0 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .btn-manage{
+        .menu-buttom();
+        padding: 0 5px;
+        height: 25px;
+        &>svg{
+          fill: var(--fn1);
+          margin-right: 2px;
+        }
+      }
+    }
+  
+    .api-input-group{
+      width: 100%;
+      height: 32px;
+      margin-top: 12px;
+      border-radius: 32px;
+      border:none;
+      box-sizing: border-box;
+      background:var(--bgr1);
+      display: flex;
+      align-items: center;
+      .perfix{
+          width: 13px;
+          height: 13px;
+          fill: var(--fn1);
+          margin-left: 12px;
+      }
+      .api-input{
+          flex: 1;
+          background: none;
+          font-size: var(--size-12px);
+          color: var(--fn1);
+      }
+      &-focus{
+        border: none !important;
+      }
+    }
+  
+    .datalist{
+      max-height: 400px;
+      margin-top: 8px;
+      overflow: hidden;
+      overflow-y: auto;
+  
+      .team-li{
+        height: 48px;
+        border-bottom: 1px solid var(--bg1);
+        display: flex;
+        align-items: center;
+        &:last-child{
+          border-bottom: none;
+        }
+       
+        .t-icon{
+          margin: 0 5px 0 5px;
+          fill: var(--fn1);
+        }
+        & .t-title{
+          flex: 1;
+          padding-left: 5px;
+        }
+        & .counts{
+          height: 17px; 
+          line-height: 17px;
+          padding: 0 8px;
+          border-radius: 3px;
+          background-color: var(--bgr1);
+         
+        }
+        & .arrow{
+          width: 16px;
+          height: 16px;
+          margin-left: 10px;
+          margin-right: 10px;
+          fill: var(--fn1);
+          transform: rotate(-90deg);
+         
+          &.down{
+            transform: rotate(0deg);
+          }
+        }
+      }
+  
+      .prolist{
+        padding: 5px 0;
+        border-bottom: 1px solid var(--bg1);
+        &:last-child{
+          border-bottom: none;
+        }
+        .pro-li{
+          height: 32px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          color: var(--fn3);
+          border-radius: 3px;
+          cursor: pointer;
+          .picon{
+            width: 16px;
+            height: 16px;
+            margin-left: 31px;
+            fill: var(--fn3);
+          }
+          & .ptitle{
+            padding-left: 6px;
+            flex:1;
+          }
+          &:hover{
+            background-color: var(--bgr1);
+            color: var(--fn1);
+            .picon{
+              fill: var(--fn1);
+            }
+          }
+          &.active{
+            background-color: var(--bg6);
+            color:#ffffff;
+            .picon{
+              fill:#ffffff;
+            }
+          }
+  
+        }
+      }
+  
+  
+    }
+    
+  
+  
+  
+  }

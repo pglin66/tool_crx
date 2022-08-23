@@ -1,0 +1,377 @@
+@import "./reset.less";
+.apipost-top-drag {
+  background: var(--bg1);
+  // border-bottom: red 1px solid;
+  width: 100vw;
+  height: 26px;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  line-height: 26px;
+  text-align: center;
+  // position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1029;
+  position: relative;
+  // padding: 5px 0;
+  cursor:pointer;
+
+  .windows-menu{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 120px;
+    -webkit-app-region: no-drag;
+    .apt-app-rl-btns{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        display: inline-block;
+        width: 30px;
+        height: 26px;
+        vertical-align: middle;
+        cursor:pointer;
+        // padding: 2px 5px;/
+        svg {
+          width: 12px;
+          height: 12px;
+          vertical-align: middle;
+        }
+      }
+      .apt-app-min:hover , .apt-app-max:hover{
+        // background: rgba(216, 216, 219, 255);
+        background: var(--bg4);
+        svg{
+          // fill:rgba(142, 143, 147, 255);
+          fill: var(--fn3);
+        }
+      }
+      .apt-app-quit:hover{
+        background: red;
+        svg{
+          fill:#fff;
+        }
+      }
+    }
+   
+  }
+  img{
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+  }
+  span{
+    margin: 0 0 0 4px;
+    color: var(--fn3);
+    vertical-align: middle;
+
+  }
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  overflow: hidden !important;
+  font-size: var(--size-12px);
+}
+
+.apis {
+  height: 100%;
+  background-color: var(--bg1);
+  display: flex;
+  flex-direction: column;
+
+  & .top {
+    height: 90px;
+  }
+  & > .main {
+    margin-right: 8px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    height: calc(100% - 88px);
+    padding-bottom: 8px;
+    .toolbars_footers {
+      width: 22px;
+      height: 31px;
+      bottom: 58px;
+      border-radius: 5px;
+      left: 30px;
+      transform: translateX(-50%);
+      position: absolute;
+      background-color: var(--bg2);
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      svg {
+        fill: var(--fn1);
+      }
+      .svgright {
+        transform: rotate(-180deg);
+      }
+    }
+    & > .toolbars {
+      width: 48px;
+      margin-left: 8px;
+
+      .list {
+        & > div {
+          &:nth-of-type(2), &:nth-of-type(5)
+          , &:nth-of-type(7) {
+            margin-top: 16px;
+            position: relative;
+            &::before {
+              content: '';
+              width: 48px;
+              height: 1px;
+              background-color: var(--bg4);
+              position: absolute;
+              top: -8px;
+              left: 0;
+            }
+          }
+        }
+        .noticeMessageCount {
+          position: absolute;
+          top: 5px;
+          left: 50%;
+          background: #ff4c4c;
+          padding: 0px 4px;
+          border-radius: 5px;
+          color: #fff;
+          line-height: 17px;
+        }
+        & > .split-line {
+          height: 1px;
+          background-color: var(--bg4);
+        }
+        & > .buttonBar {
+          width: 48px;
+          height: 57px;
+          margin: 0 0 8px 0;
+          border-radius: 5px;
+          display: flex;
+          flex-direction: column;
+          cursor: pointer;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          overflow: visible;
+          a{
+            width:48px;
+            height: 57px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+
+          & svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--fn3);
+          }
+          & > span {
+            width: 48px;
+            text-align: center;
+          }
+          & .barname {
+            height: 17px;
+            line-height: 17px;
+            padding-top: 4px;
+            color: var(--fn3);
+            font-size: var(--size-12px);
+          }
+          &:hover,
+          &.active {
+            background-color: var(--bgr1);
+            & svg {
+              fill: var(--fn1);
+            }
+            & .barname {
+              color: var(--fn1);
+            }
+          }
+        }
+        & > .active {
+          background-color: var(--bgr1);
+        }
+      }
+    }
+    .menus {
+      width: 100%;
+      flex-shrink: 0;
+      background-color: var(--bg2);
+      margin-left: 8px;
+      border-radius: 5px;
+      color: var(--fn1);
+      padding-top: 8px;
+    }
+
+    .workspace {
+      flex: 1;
+      width: 0;
+      margin-left: 2px;
+      margin-right: 8px;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      .workspace_api {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        max-height: calc(100vh - 44px - 88px);
+      }
+    }
+  }
+}
+.react-draggable {
+  & .resize-vertical-bar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 2px;
+    background-color: var(--bg1);
+    display: flex;
+    align-items: center;
+    & > div {
+      width: 4px !important;
+      height: 60px !important;
+      position: static !important;
+      border-radius: 2px;
+      background: var(--bg5);
+      cursor: pointer;
+    }
+  }
+  & .resize-horizontal-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: var(--bg1);
+    display: flex;
+    justify-content: center;
+    & > div {
+      width: 60px !important;
+      height: 4px !important;
+      position: static !important;
+      border-radius: 2px;
+      background: var(--bg5);
+      cursor: pointer;
+    }
+  }
+}
+
+
+// .alert_apis_project {
+//   width: 98%;
+//   left: 50%;
+//   top: 15px !important;
+//   transform: translateX(-50%);
+//   background: #fffee8;
+//   /* 通知/警告/边框 */
+//   border: 1px solid #dfbb00;
+//   box-sizing: border-box;
+//   border-radius: 5px;
+//   color: #2b2b2b;
+//   & > div {
+//     display: flex;
+//     align-items: center;
+//   }
+//   .apt_alert-icon {
+//     margin-right: 12px;
+//   }
+// }
+
+.apt_alert.alert_apis_project {
+  width: 100%;
+  left: 50%;
+  top: 0px !important;
+  transform: translateX(-50%);
+  background: #fffee8;
+  /* 通知/警告/边框 */
+  border: 1px solid #dfbb00;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #2b2b2b;
+  position: static;
+  transform: none;
+  & > div {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .apt_alert-icon {
+    margin-right: 12px;
+  }
+}
+
+.fixed-update {
+  position: fixed;
+  bottom: 60px;
+  width: 300px;
+  left: 100%;
+  padding: 24px;
+  transform: translateX(-300px);
+  z-index: 99;
+  color: var(--fn1);
+  background-color: var(--mbg3);
+  border-radius: 5px;;
+  border: solid 1px var(--bg2);
+  &-header {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 17px;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #000000;
+    position: relative;
+    vertical-align: middle;
+
+    .right {
+      text-align: right;
+      position: absolute;
+      right: -10px;
+      top: -5px;
+      >svg {
+        vertical-align: middle;
+        fill: var(--fn3);
+        margin-right: 6px;
+      }
+    }
+
+    /* 暗黑模式/字1 */
+
+    color: var(--fn1);
+  }
+
+  &-content {
+    max-height: 200px;
+    overflow-y: scroll;
+    line-height: 1.5;
+  }
+
+  &-footer {
+    .api-btn {
+      width: 100%;
+      height: 41px;
+      background: #3a86ff;
+      margin: 16px 0 0 0;
+      border: none;
+      
+      color: #fff;
+    }
+  }
+}
+

@@ -1,0 +1,88 @@
+.login_form {
+    width: 335px;
+    color: var(--fn1);
+    .login_tab {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30px;
+      margin-bottom: 32px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: right;
+      .login_pane {
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 4px;
+        }
+      }
+      .wx_login {
+        // display: flex;
+        // align-items: center;
+        svg {
+          // vertical-align: middle;
+        }
+      }
+      .login_paneDrive {
+        width: 0px;
+        height: 24px;
+        border: 1px solid var(--bg1);
+        // margin: 5px 0 0 0px;
+        margin: 0 29px;
+      }
+    }
+    .login_foot {
+      // margin-top: 32px;
+      .login_foot_fre {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px;
+      }
+    }
+    .filed_provider {
+      & > div {
+        height: 68px;
+      }
+      .api-input-group {
+        height: 38px;
+        .api-input-error {
+          background: rgba(255, 76, 76, 0.1) !important;
+          border: none;
+        }
+        .api-input {
+          background-color: var(--bg2);
+        }
+        &.api-input-group-error {
+          background: rgba(255, 76, 76, 0.1);
+          border: 1px solid var(--input-border-error);
+        }
+        & + p {
+          margin-top: 6px;
+        }
+      }
+    }
+    .login_btn {
+      color: #fff;
+    }
+    .register_round {
+      position: relative;
+      .time_over {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+  
+        button {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+  
+  

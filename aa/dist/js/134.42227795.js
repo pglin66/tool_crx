@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkapicode"]=self["webpackChunkapicode"]||[]).push([[134],{134:function(e,n,s){s.r(n),s.d(n,{default:function(){return u}});var t=s(2179),a={__name:"svgList",setup(e){return window.addEventListener("message",(function(e){console.log(e.data,"svgList")})),(e,n)=>((0,t.wg)(),(0,t.iD)("div",null," 111 "))}};const i=a;var u=i}}]);
+//# sourceMappingURL=134.42227795.js.map

@@ -1,0 +1,121 @@
+.statustab {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+  
+    .status-group {
+      display: flex;
+      margin: 0 4px;
+      padding: 0 2px;
+      align-items: center;
+      .download_res,
+      .network_panel {
+        cursor: pointer;
+      }
+      dd {
+        color: var(--fn3);
+      }
+      svg {
+        fill: var(--fn3);
+      }
+      span {
+        padding-left: 3px;
+      }
+      .success {
+        color: #3cc071;
+        fill: #3cc071;
+      }
+      .error {
+        color: var(--error);
+      }
+    }
+  }
+  
+  .resp-content-tabs {
+    height: 100%;
+  
+    .api-post-tabs-header {
+      // height: 40px;
+      display: flex;
+      align-items: center;
+      padding-bottom: 8px !important;
+      .resp-header-content {
+        flex: none;
+        display: flex;
+        height: 28px !important;
+        padding: 1px;
+        border-radius: 5px;
+        border: 1px solid var(--bgr1);
+        align-items: center;
+        margin-left: 8px;
+        .api-post-tabs-headitem {
+          min-width: 0;
+          margin: 0 8px 0 0;
+          padding: 0 8px;
+          color: var(--fn3);
+          display: flex;
+          border-radius: 3px !important;
+          position: relative;
+          cursor: pointer;
+          &:last-child {
+            margin-right: 0;
+          }
+          border: none !important;
+          &.active {
+            background-color: var(--bgr1) !important;
+          }
+        }
+      }
+      .head-extra {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        .extra-left {
+          display: flex;
+          align-items: center;
+        }
+        svg {
+          fill: var(--fn3);
+        }
+        .svg-btn {
+          width: 24px;
+          height: 24px;
+          margin-left: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 3px;
+          cursor: pointer;
+          &:hover {
+            background-color: var(--bgr1);
+          }
+          &.disable {
+            cursor: default;
+            svg {
+              fill: var(--bgr2);
+            }
+            &:hover {
+              background: none;
+            }
+          }
+        }
+        .extra-right {
+          display: flex;
+          align-items: center;
+          span {
+            color: var(--fn3);
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+  
+    .api-post-tabs-content {
+      padding: 0 8px;
+  
+      .rawhtml {
+        line-height: 18px;
+      }
+    }
+  }
+  

@@ -1,0 +1,174 @@
+.headmenus {
+    display: flex;
+    height: 28px;
+    padding: 1px;
+    border-radius: 5px;
+    border: 1px solid var(--bgr1);
+    align-items: center;
+  
+    .btn-rect {
+      width: 24px;
+      height: 24px;
+      border-radius: 3px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & > svg {
+        fill: var(--fn3);
+      }
+      &:hover {
+        background-color: var(--bgr1);
+        & > svg {
+          fill: var(--fn1);
+        }
+      }
+    }
+    .btn-strecth {
+      .btn-rect();
+      &.hidebar {
+        transform: rotate(180deg);
+      }
+      margin-left: 8px;
+    }
+    .btn-edit {
+      .btn-rect();
+    }
+  
+    .api-post-dropdown {
+      margin-left: 16px;
+      height: 24px;
+    }
+  
+    .api-post-dropdown-container {
+      margin-top: 4px;
+    }
+  
+    .btn-remove {
+      width: 10px;
+      height: 10px;
+      border-radius: 1px;
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      fill: var(--fn3);
+      cursor: pointer;
+    }
+  
+    .viewmenu-list {
+      width: 132px;
+      &-vtitle {
+        color: var(--fn3);
+        padding: 0 6px;
+      }
+      &-mitem {
+        margin: 8px 0;
+        padding: 0 6px;
+        height: 32px;
+        color: var(--fn1);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 3px;
+        position: relative;
+        cursor: pointer;
+        & > svg {
+          fill: var(--fn1);
+        }
+        & > span {
+          padding-left: 5px;
+        }
+        &:hover {
+          background-color: var(--bgr1);
+        }
+  
+        &.editmode {
+          border: 1px dashed var(--fn3);
+        }
+      }
+  
+      .dividerline {
+        margin-top: 6px;
+        border-top: 1px solid var(--bd1);
+        margin-bottom: 12px;
+      }
+    }
+  
+    .menu-list {
+      display: flex;
+    }
+  
+    .menu-item {
+      display: flex;
+      white-space: nowrap;
+      padding: 0 6px;
+      margin: 0 3px;
+      height: 24px;
+      line-height: 24px;
+      border-radius: 3px;
+      align-items: center;
+      color: var(--fn3);
+      cursor: pointer;
+      & > svg {
+        fill: var(--fn3);
+      }
+      & .arrowdown {
+        width: 12px;
+      }
+      &:hover {
+        background-color: var(--bgr1);
+        color: var(--fn1);
+        & > svg {
+          fill: var(--fn1);
+        }
+      }
+      & > span {
+        margin-left: 4px;
+      }
+      &.editmode {
+        padding: 0 5px;
+        border: 1px dashed var(--fn3);
+        position: relative;
+      }
+    }
+  
+    .btnlist {
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+  
+      .drop-btn {
+        width: 61px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--fn1);
+        background-color: var(--bgr1);
+        border-radius: 5px;
+        cursor: pointer;
+        &.btnok {
+          color: #fff;
+          background-color: var(--bg6);
+        }
+      }
+    }
+  }
+  
+  .btn-eidt {
+    margin: 8px 0 0 0;
+    padding: 0 6px;
+    height: 32px;
+    height: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    color: #3a86ff;
+    cursor: pointer;
+    svg {
+      fill: #3a86ff;
+      vertical-align: middle;
+      margin: 0 10px 0 0;
+    }
+  }
+  

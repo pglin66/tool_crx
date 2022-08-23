@@ -1,0 +1,223 @@
+.svgdropmenu {
+    fill: var(--fn1);
+    margin-right: 10px;
+  }
+  
+  .apitabss-context-menu{
+    .menu-item{
+      display: flex;
+      align-items: center;
+      .left-svg {
+        width: 120px;
+        display: flex;
+        align-items: center;
+      }
+      .right-tips {
+        min-width: 40px;
+        display: inline-block;
+        text-align: right;
+        color: var(--fn2);
+        margin: 0 0 0 8px;
+      }
+    }
+  }
+  
+  .tabpan-context-menu{
+    .apitabss-context-menu();
+    background-color: var(--bgr5);
+    border: 1px solid var(--bd4);
+    box-shadow: 0px 4px 10px var(--bgr6);
+    backdrop-filter: blur(20px);
+    position: relative;
+    border-radius: 5px;
+    padding: 6px 8px;
+  
+    .api-post-menu-item{
+      padding: 0 6px 0 0;
+      height: 28px;
+    }
+   
+  }
+  
+  
+  
+  
+  .apis-interface-tabs {
+    position: relative;
+    z-index: 2;
+    
+  
+    .api-post-tabs-header {
+      height: 28px;
+      display: flex;
+      align-items: center;
+  
+      .api-post-tabs-header-content{
+        flex: none;
+        width: auto;
+        overflow: hidden; 
+        max-width: calc(100% - 150px);
+      }
+  
+      .tabs-header-panel{
+        width: 68px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & .button {
+          width: 28px;
+          height: 28px;
+          padding: 0 7px;
+          box-sizing: border-box;
+          background-color: var(--bg2);
+          cursor: pointer;
+          border-radius: 5px;
+          fill: var(--fn1);
+          &:hover{
+              background-color:var(--bg3);
+          }
+        }
+      }
+      .adds-panel{
+        .tabs-header-panel();
+        position: absolute;
+        right: 76px;
+        top: 0;
+      }
+      .extra-panel{
+        .tabs-header-panel();
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+  
+      
+  
+     
+      .api-post-tabs-headitem {
+        flex-shrink: 0;
+        width: 149px;
+        height: 28px;
+        margin: 0 4px 0 0;
+        padding: none;
+        border-radius: 5px 5px 0px 0px;
+        position: relative;
+        background-color: none;
+        opacity: 0.7;
+        display: flex;
+        & > svg {
+          fill: var(--fn1);
+        }
+        &>span{
+          height: 28px;
+          flex: 1;
+          display: flex;
+          &>div{
+            flex: 1;
+            display: flex;
+            &>.tabitem{
+              flex: 1;
+            }
+          }
+          
+        }
+  
+        &.active {
+          background-color: var(--bg2);
+          opacity: 1;
+          .split {
+            display: none;
+          }
+        }
+        &:hover{
+          opacity: 1;
+        }
+        &:not(.active) {
+          .split {
+            position: absolute;
+            right: -1px;
+            top: 50%;
+            transform: translateY(-10px);
+            height: 21px;
+            width: 0;
+            border-right: 1px solid var(--bg2);
+          }
+        }
+  
+        .tabitem {
+          height: 100%;
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transform: translateX(-10px);
+        }
+  
+        .newicon {
+          width: 6px;
+          height: 6px;
+          border-radius: 100%;
+          background-color: var(--error);
+        }
+  
+        .method {
+          padding: 0 4px;
+          font-weight: 400;
+          color: #2BA58F;
+  
+          &.GET {
+            color: #2BA58F;
+          }
+  
+          &.POST {
+            color: #DF7B07;
+          }
+          &.DELETE{
+            color: #FF4C4C ;
+          }
+          &.PUT {
+            color: #5292F7;
+          }
+        }
+  
+        .text {
+          color: var(--fn1);
+          max-width: 60px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+  
+        .api-post-tabs-headitem-close {
+          width: 17px;
+          height: 17px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 10px;
+        }
+      }
+    }
+  }
+  
+  
+  .apt-tooltip-title {
+    // width: 150px;
+    height: auto;
+    color: var(--fn1);
+    line-height: var(--size-20px);
+    width: max-content;
+    .method {
+      padding: 0 4px;
+      font-weight: 400;
+      color: var(--method3);
+      &.GET {
+        color: var(--method1);
+      }
+      &.POST {
+        color: var(--method2);
+      }
+    }
+    
+  }

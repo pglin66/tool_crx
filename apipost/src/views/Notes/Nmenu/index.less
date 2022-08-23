@@ -1,0 +1,116 @@
+.addTags_modal {
+    min-width: 380px !important;
+    min-height: 233px !important;
+    height: 233px !important;
+    width: 380px !important;
+    border-radius: 5px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // background-color: #27272B;
+    .addtag_modal-title {
+      color: var(--fn1);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: left;
+    }
+    .api-input-group {
+      height: 44px;
+    }
+    .btn_control {
+      display: flex;
+      justify-content: space-between;
+    }
+    .btn_note {
+      width: 152px;
+      height: 41px;
+      border-radius: 5px;
+      color: #fff;
+    }
+  }
+  .nmenu_notes {
+    width: 289px;
+    padding: 16px;
+    background-color: var(--bg2);
+    border-radius: 5px;
+    margin-left: 8px;
+    color: var(--fn1);
+    .menus-header-filters {
+      position: relative;
+      input {
+        padding-left: 25px;
+      }
+      svg {
+        position: absolute;
+        left: 5px;
+      }
+    }
+    .addTag {
+      margin: 16px 0;
+      padding-left: 10px;
+      display: flex;
+      & > span {
+        margin-right: 16px;
+      }
+      span {
+        display: flex;
+        align-items: center;
+        width: max-content;
+        cursor: pointer;
+      }
+    }
+    .search_note {
+      .api-input-group {
+        // background: var(--bg1);
+        // border: 1px solid var(--bg8);
+        // box-sizing: border-box;
+        // border-radius: 5px;
+        height: 30px;
+        font-size: var(--size-12px);
+      }
+    }
+    .notes_tree {
+      height: calc(100% - 80px);
+      overflow-y: auto;
+      .api-post-tree {
+        & > div {
+          width: 100% !important;
+          .api-post-tree-node {
+            display: flex;
+            align-items: center;
+            &.tree-node-selected {
+              background-color: #3a86ff;
+              color: #fff;
+            }
+            .item_tag {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 88%;
+              margin-left: 8px;
+              height: 100%;
+              & > span:first-child {
+                width: 90%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+              .del_icon {
+                visibility: hidden;
+                cursor: pointer;
+              }
+            }
+            &:hover .del_icon {
+              visibility: visible;
+            }
+            &.tree-node-selected:hover .del_icon {
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,97 @@
+.runner_results {
+  max-height: calc(100% - 160px);
+  // max-width: 1000px;
+  overflow: auto;
+  .NOE {
+    height: 33px;
+  }
+  .runner_collapse {
+    // display: flex;
+    // justify-content: space-between;
+    height: 40px;
+    // align-items: center;
+    line-height: 23px;
+    padding: 8px;
+    min-width: 660px;
+    .api_info {
+      // display: flex;
+      align-items: center;
+      max-width: 70%;
+      // flex: 0 0 70%;
+      .Icon {
+        float: left;
+      }
+      span {
+        margin: 0 8px;
+        white-space: nowrap;
+        float: left;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        &.name {
+          width: 25%;
+        }
+        &.url {
+          width: 40%;
+        }
+      }
+    }
+    .api_control {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      // max-width: 30%;
+      // flex:  0 0 30%;
+      em {
+        width: 1px;
+        height: 25px;
+        background-color: var(--bd7);
+        margin: 0 8px;
+      }
+    }
+  }
+  .runner_collapse_con {
+    padding-left: 35px;
+    .runner_assert_test {
+      height: 38px;
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      border-radius: 5px;
+      &.success {
+        background-color: #3cc0711a;
+      }
+      &.error {
+        background-color: #ff4c4c1a;
+      }
+    }
+  }
+}
+.runner_lookReq {
+  .api-post-tabs-header-content {
+    margin-bottom: 24px;
+  }
+  .api-post-table {
+    .api-post-table-td-border {
+      text-align: left;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+  .backup-preview-message_box {
+    border-radius: 5px;
+  }
+  .api-post-tabs-content {
+    .api-post-table {
+      tr {
+        height: 40px;
+      }
+    }
+  }
+  .api-post-tabs-headitem {
+    padding: 4px 8px;
+    height: 25px;
+    &.active {
+      background-color: var(--bg4);
+    }
+  }
+}

@@ -1,0 +1,127 @@
+.paramsdesc-modal{
+
+  
+  
+    .apipost-textbox{
+      color: var(--fn1);
+    }
+  
+    .envtable{
+      height: 440px;
+      overflow: hidden;
+      overflow-y: auto;
+      margin-top: 24px;
+  
+      .tabtitle{
+        margin: 24px 0;
+        color: var(--fn1);
+      }
+      .api-post-table-td-border{
+        text-align: center;
+        vertical-align: middle;
+        line-height: 100%;
+        span{
+          display: block;
+          height: 36px;
+          line-height: 36px;
+        }
+      }
+      .apipost-textbox{
+        border: none;
+      }
+      .btn-delete{
+        width: 16px;
+        height: 16px;
+        fill: var(--fn2);
+        cursor: pointer;
+        display: inline;
+      }
+    }
+    @media screen and (max-height: 880px) {
+      .envtable{
+        height: auto;
+        padding-bottom: 10px;
+      }
+    }
+  
+  
+  }
+  
+  .paramsdesc-search {
+    margin-bottom: 8px;
+    .perfix {
+      margin-left: 8px;
+      fill: var(--fn3);
+    }
+    .api-input-group {
+      width: 100%;
+      height: 25px;
+      border: 1px solid var(--bd8);
+      box-sizing: border-box;
+      background: none;
+      display: flex;
+      align-items: center;
+      transition: none;
+      .api-input {
+        flex: 1 1;
+        background: none;
+        font-size: var(--size-12px);
+        color: var(--fn3);
+      }
+    }
+  }
+  
+  
+  .paramsdesc-footer{
+  
+    .footer-marks{
+      .api-check-box{
+        border: 1px solid var(--bd1);
+        &:hover{
+          background: none;
+        }
+        &.api-check-box-active{
+          border: 1px solid var(--bd1);
+          background: var(--bg6);
+        }
+      }
+      span{
+        color: var(--fn1);
+        margin-left: 6px;
+      }
+      .link-info{
+        display: flex;
+        align-items: center;
+        margin-left: 25px;
+        svg{
+          fill:var(--fn4);
+          &.more{
+            transform:rotate(180deg);
+          }
+        }
+        a{
+          padding-left: 8px;
+          color: var(--fn4);
+        }
+        
+      }
+    }
+    .footer-btns{
+      .api-btn {
+        width: 120px;
+        flex-shrink: 0;
+      }
+      .footer-svg {
+        fill: var(--fn1);
+      }
+      .btnclose{
+        color: var(--fn1);
+      }
+    }
+  
+    .desc-drop-menu {
+      .api-post-menu-item {
+        white-space: nowrap;
+      }
+    }
+  }

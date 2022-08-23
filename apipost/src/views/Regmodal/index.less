@@ -1,0 +1,72 @@
+.loadingCircle {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 12px;
+    top: 12px;
+    line-height: 1;
+    animation: loadingCircle 1s linear infinite;
+  }
+  
+  @keyframes loadingCircle {
+    from {
+      transform: rotate(0);
+    }
+  
+    50% {
+      transform: rotate(180deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .regChoose {
+    &_bind {
+  
+    }
+    &_user_msg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 68px 0 0 0;
+      .photo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 12px 0 0;
+      }
+      .name {
+        max-width: 190px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 16px;
+        color: var(--fn1);
+        text-align: left;
+      }
+    }
+    
+    .btn1 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 67px 0 0 0;
+  
+      button {
+        width: 163px;
+        height: 40px;
+        border-radius: 5px;
+        font-size: 12px;
+      }
+    }
+  
+  }
+  
+  
+  .api-regModal{
+    .api-input-group{
+      height: 44px;
+    }
+  }

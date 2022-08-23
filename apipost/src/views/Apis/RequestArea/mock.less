@@ -1,0 +1,82 @@
+.request-area-mock_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    .request-area-mock_refresh_div {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      // background-color: var(--bgr1);
+      svg {
+        fill: var(--fn1);
+      }
+    }
+    .request-area-mock_left {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      // flex: 0 0 70%;
+      .api-input-group {
+        margin-right: 8px;
+      }
+      // .api-input-group{
+      //   &:last-child{
+      //     width: 100px;
+      //   }
+      // }
+      div {
+        display: flex;
+        // flex: 1;
+        align-items: center;
+        // min-width: 100px;
+        white-space: nowrap;
+        margin-right: 8px;
+        // border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+    .request-area-mock_right {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    .request-area-mock_left {
+      & > div:first-child {
+        flex: 0 0 20% !important;
+      }
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .request-area-mock_right .text,
+    .request-area-mock_left .text {
+      display: none;
+    }
+  }
+  
+  .request-area-mock {
+    height: calc(100% - 60px);
+  }
+  
+  .mask_mock_ap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    bottom: 0;
+    background: var(--bgr5);
+    // opacity: 0.8;
+    z-index: 1;
+    .proEmpty {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+  

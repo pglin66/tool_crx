@@ -1,0 +1,29 @@
+.apt_Assert {
+    height: 100%;
+    position: relative;
+    .api_post_empty_container{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    ul {
+      li {
+        border-radius: 3px;
+        background-color: transparent;
+        color: var(--fn1);
+        height: 25px;
+        margin-top: 4px;
+        padding: 0 8px;
+        display: flex;
+        align-items: center;
+        &.faild {
+          background: rgba(255, 76, 76, 0.1);
+        }
+        &.success {
+          background: rgba(60, 192, 113, 0.08);
+        }
+      }
+    }
+  }
+  

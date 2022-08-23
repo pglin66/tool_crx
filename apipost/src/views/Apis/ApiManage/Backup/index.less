@@ -1,0 +1,80 @@
+.sys-modal-content {
+    .backup-list {
+      height: 550px;
+      font-size: 12px;
+      overflow-y: auto;
+      text-align: left;
+      .list-title {
+        color: var(--title-color);
+        display: flex;
+        margin: 0 0 8px 0;
+        padding: 8px;
+      }
+      .list-des {
+        color: var(--fn1);
+        display: flex;
+        margin: 0 0 8px 0;
+        padding: 8px;
+        border-radius: 5px;
+        &:hover {
+          background: rgba(255, 255, 255, 0.08);
+        }
+      }
+      .drop {
+        width: 14px;
+        margin: 1.5px 10px 0 0;
+        cursor: pointer;
+        > div {
+          width: 100%;
+          height: 14px;
+          border-radius: 3px;
+          background: rgba(255, 255, 255, 0.08);
+        }
+        svg {
+          width: 14px;
+          height: 14px;
+          fill: var(--fn1);
+        }
+      }
+      .number {
+        width: 24px;
+        margin: 0 10px 0 0;
+        text-align: center;
+        > div {
+          width: 100%;
+          height: 17px;
+          line-height: 17px;
+          border-radius: 3px;
+          background: rgba(255, 255, 255, 0.08);
+        }
+      }
+      .date, .api-name, .time, .owner {
+        width: 132px;
+      }
+      .api-name {
+        padding: 0 12px 0 0;
+      }
+       .owner {
+         display: flex;
+         > img {
+           width: 16px;
+           height: 16px;
+           border-radius: 50%;
+           margin: 0 4px 0 0;
+         }
+       }
+      .handle {
+        display: flex;
+        .preview, .reduction, .del { 
+          margin-right: 10px;
+          cursor: pointer;
+        }
+        .reduction { color: var(--bg6); }
+        .del { color: #ff4c4c; }
+      }
+    }
+    .backup-preview-message_box {
+      padding: 16px;
+      background: var(--bg2);
+    }
+  }

@@ -1,0 +1,106 @@
+.folder-panel{
+    padding: 0 24px;
+    background-color: var(--bg2);
+    height: 100%;
+    .folder-header{
+      // height: 80px;
+      margin: 16px 0;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      .api-input-group{
+        height: 40px;
+        flex: 1;
+        border: none;
+        .api-input-text{
+          color: var(--fn1);
+        }
+      }
+      .btn-save-folder{
+        width: 137px;
+        height: 40px;
+        border-radius: 5px;
+        margin-left: 16px;
+        line-height: 40px;
+        text-align: center;
+        color:#ffffff;
+        background-color: var(--bg6);
+        cursor: pointer;
+      }
+    }
+  
+    .textarea-panel{
+      height: 100px;
+    }
+  
+    .basic-textarea{
+      border: 1px solid var(--bg4);
+      padding: 5px 12px;
+      outline: none !important;
+      color: var(--fn1);
+      background-color: var(--bg1) !important;
+      border-radius: 5px;
+      line-height: 20px !important;
+      min-height: 86px;
+      max-height: 86px;
+      overflow: hidden;
+      overflow-y: auto;
+    }
+  
+  
+    .folder-content-panel{
+      height: calc(100vh - 350px);
+      box-sizing: border-box;
+      .api-post-tabs{
+        height: 100%;
+        .api-post-tabs-headitem{
+          margin: 0 12px 0 0;
+          height: 25px;
+          padding: 0 8px;
+          white-space: nowrap;
+          border-bottom: 2px solid transparent;
+          &.active{
+            // background-color: var(--bg4);
+            background-color: transparent;
+            border-bottom: 2px solid #F26B3A;
+            border-radius: 0;
+          }
+        }
+        .api-post-tabs-content{
+          padding: 20px 0;
+          height: calc(100% - 25px);
+        }
+        .apipost-table-container{
+          height: calc(100vh - 390px);
+          overflow: hidden;
+          overflow-y: auto;
+        }
+        
+      }
+      .apipost-textbox{
+        border: none;
+      }
+      .btn-delete{
+        fill: var(--fn2);
+        cursor: pointer;
+      }
+  
+      .switch-panel{
+        padding-bottom: 10px;
+      }
+      .script-box{
+        height: calc(100vh - 410px);
+      }
+    }
+  
+    .apipost-auth{
+      .apipost-textbox{
+        border: 1px solid var(--bd8);
+        border-radius: 0;
+      }
+    }
+  
+  
+  
+  
+  }

@@ -1,0 +1,145 @@
+.apt_runner_menu {
+    // width: 289px;
+    height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    background-color: var(--bg2);
+    margin-left: 8px;
+    border-radius: 5px;
+    color: var(--fn1);
+    padding: 16px;
+    .menus-header-filters{
+      padding-right: 8px;
+    }
+    .apt_runner_tree {
+      margin-top: 16px;
+      height: calc(100% - 62px);
+      overflow-y: auto;
+      &>div{
+        &>div{
+          width: 100% !important;
+  
+        }
+      }
+      .btn-to-add{
+        width: 20px;
+        height: 20px;
+        background-color: var(--bgr1);
+        border-radius:3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &>svg{
+          fill: var(--fn1);
+        }
+      }
+  
+      .apt_folder_item_render {
+        width: 100%;
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        height: 30px;
+        align-items: center;
+        color: var(--fn3);
+        cursor: pointer;
+        &:hover {
+          color: var(--fn1);
+        }
+        .apt_folder_item_render_left {
+          width: 90%;
+          display: flex;
+          align-items: center;
+          .fied-width{
+            width: 36px;
+            min-width: 36px;
+            overflow: hidden;
+          }
+          svg{
+            fill: var(--fn3);
+            &.svgapis {
+                width: 12px;
+                height: 12px;
+                min-width: 12px;
+            }
+            &.folders {
+                width: 14px;
+                height: 14px;
+                min-width: 14px;
+            }
+          }
+          .apt_folder_item_render_name{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .apt_target_type {
+            margin: 0 4px;
+            color: var(--method1);
+            &.POST {
+              color: var(--method2);
+            }
+            &.GET {
+              color: var(--method1);
+            }
+            &.DELETE {
+              color: var(--method3);
+            }
+          }
+        }
+      }
+    }
+    .api-input-group {
+      height: 30px;
+      border: 1px solid var(--bd8);
+      box-sizing: border-box;
+      background: var(--bg1);
+      display: flex;
+      align-items: center;
+      .perfix {
+        width: 13px;
+        height: 13px;
+        margin-left: 8px;
+        fill: var(--fn3);
+      }
+      .api-input {
+        flex: 1;
+        background: none;
+        font-size: var(--size-12px);
+        color: var(--fn3);
+      }
+    }
+    .api-input-group-focus {
+      border-color: var(--bd4) !important;
+    }
+    .api-select {
+      width: 68px !important;
+      margin-right: 4px;
+      background-color: var(--bg4);
+      min-width: 0;
+      height: 22px !important;
+      min-height: 0;
+      // border-radius: 26px;
+      border: none;
+      .api-select-selector-icon {
+        width: 10px;
+        & > svg {
+          width: 10px;
+        }
+      }
+      & .api-select-selector {
+        padding: 0 5px 0 0;
+        display: flex;
+        cursor: pointer;
+        .api-select-selector-value {
+          flex: 1;
+          text-align: center;
+          min-width: 0;
+          min-height: 0;
+          line-height: 16px;
+          font-size: var(--size-12px) !important;
+        }
+      }
+    }
+  }
+  

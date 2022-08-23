@@ -1,0 +1,92 @@
+.apt_runner_response {
+    color: var(--fn3);
+    height: 100%;
+    .apt_runner_response_head {
+      display: flex;
+      justify-content: space-between;
+      height: 90px;
+      align-items: center;
+      padding: 8px;
+      .left {
+        display: flex;
+        .name_time {
+          margin-right: 24px;
+          .runner_name {
+            font-size: 16px;
+            line-height: 22px;
+            overflow: hidden;
+            white-space: nowrap;
+            max-width: 75px;
+            text-overflow: ellipsis;
+          }
+          .runner_time {
+            font-size: 12px;
+            line-height: 17px;
+            margin-top: 4px;
+          }
+        }
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        .assert_success,
+        .assert_error {
+          width: 66px;
+          height: 66px;
+          text-align: center;
+          border: 4px solid;
+          border-radius: 50%;
+          margin-right: 25px;
+          padding: 10px;
+          line-height: 22px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .assert_success {
+          border-color: #3cc071;
+          color: #3cc071;
+        }
+        .assert_error {
+          border-color: var(--error);
+          color: var(--error);
+        }
+        .api_test {
+          .api_success,
+          .api_error {
+            display: flex;
+            align-items: center;
+            margin: 16px 0;
+          }
+          .api_success {
+            color: #3cc071;
+          }
+          .api_error {
+            color: var(--error);
+          }
+        }
+        .export_btn {
+          width: 116px;
+          height: 40px;
+          margin-left: 24px;
+          background: var(--bgr1);
+          border-radius: 5px;
+        }
+      }
+    }
+    .runner-progress-outer-bar {
+      width: 100%;
+      height: 10px;
+      margin: 16px 0;
+      border-radius: 14px;
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+  
+    .runner-progress-outer-bar .runner-progress-inner-bar {
+      width: 0;
+      border-radius: 14px;
+      height: 100%;
+      background-color: #3cc071;
+    }
+  }
+  

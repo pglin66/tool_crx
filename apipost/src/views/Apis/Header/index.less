@@ -1,0 +1,383 @@
+.apis-header {
+    height: 50px;
+    display: flex;
+    padding: 0 16px 0 10px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--size-12px);
+  
+  
+    .menu-buttom {
+      border-radius: 5px;
+    
+      color: var(--fn3);
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      & > svg {
+        fill: var(--fn3);
+      }
+      &:hover{
+        color: var(--fn1);
+        &>svg{
+          fill: var(--fn1);
+        }
+        background-color: var(--bgr1);
+      }
+    }
+  
+    &-left {
+      flex: 1;
+      display: flex;
+      .leftteams{
+        display: flex;
+  
+      }
+  
+  
+  
+      & .btn-home {
+        .menu-buttom();
+        width: 60px;
+        height: 30px;
+        margin: 0 16px 0 0;
+        & > svg {
+          width: 14px;
+          height: 14px;
+          margin-right: 4px;
+        }
+      }
+      
+  
+      & .btn-teams {
+        .menu-buttom();
+        max-width: 257px;
+        padding: 0 8px;
+        justify-content: flex-start;
+        & > span {
+          flex: 1;
+          padding: 0 4px;
+          flex-shrink: 0;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        & .arrow-show-more {
+         
+          fill: var(--fn3);
+        }
+      }
+      & .btn-static {
+        width: 65px;
+        height: 30px;
+        margin-left: 16px;
+      }
+      & .btn-create {
+        .btn-home();
+        margin-left: 16px;
+        color: var(--fn1);
+        & > svg {
+          fill: var(--fn1);
+        }
+        background-color: var(--bgr1);
+      }
+    }
+  
+    &-right {
+      display: flex;
+      align-items: center;
+      .btn-rect {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & > svg {
+          fill: var(--fn3);
+        }
+      }
+   
+  
+      .btn-refresh {
+        .btn-rect();
+        margin-left: 16px;
+        border-radius: 50%;
+        background: var(--bg6);
+        @keyframes btnRotate {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(-360deg);
+          }
+        }
+        & > svg {
+          fill: #ffffff;
+          &.loading {
+            animation: btnRotate 1s infinite linear;
+          }
+        }
+      }
+  
+      .btn-notice{
+        .btn-rect();
+        margin-left: 16px;
+        border-radius: 5px;
+        position: relative;
+        &:hover{
+          background-color: var(--bgr1);
+          &>svg{
+            fill: var(--fn1)
+          }
+        }
+        .message-count {
+          position: absolute;
+          top: 0;
+          left: 60%;
+          background: #ff4c4c;
+          padding: 0px 4px;
+          border-radius: 5px;
+          color: #fff;
+          line-height: 17px;
+        }
+      }
+  
+      .btn-coop{
+        .btn-notice();
+        position: relative;
+        .sylog_dot{
+          position: absolute;
+          right: 5px;
+          top: 5px;
+        }
+  
+      }
+  
+      & .btn-logs {
+        .menu-buttom();
+        width: 93px;
+        height: 30px;
+        margin-left: 16px;
+        & > svg {
+          width: 14px;
+          height: 14px;
+          margin-right: 4px;
+          fill: var(--fn3);
+        }
+        .sp-logs{
+          position: relative;
+          .sylog_dot{
+            position: absolute;
+            right: -8px;
+            top: 0;
+          }
+        }
+      }
+  
+      & .userlist {
+        height: 30px;
+        display: flex;
+        margin-left: 16px;
+        .uselist-avatar {
+          position: relative;
+          .isOnline {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            left: 25px;
+            top: 25px;
+            background: #07E81D;
+            &.notOnline {
+              background: #9E9E9E;
+            }
+          }
+        }
+        .out_tooltip {
+          // display: none;
+          // position: absolute;
+          top: 30px;
+          z-index: 2;
+          // width: 136px;
+          // height: 38px;
+          // padding: 12px;
+          // background: rgba(34, 34, 37, 0.95);
+          // border: 1px solid #2c2c2c;
+          // backdrop-filter: blur(20px);
+          /* Note: backdrop-filter has minimal browser support */
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          // flex-direction: column;
+          // justify-content: space-between;
+          span{
+            color: var(--mfn4) !important;
+          }
+          .out_tooltip_item{
+              max-width: 100px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              &.out_tooltip_name{
+                  color: var(--fn1);
+              }
+              &.out_tooltip_email{
+                margin: 4px 0 0 0;
+                color: var(--fn2) !important;
+              }
+          }
+        }
+        & .useritem {
+          width: 30px;
+          height: 30px;
+          margin-left: 4px;
+          border-radius: 50%;
+          border: 1px solid var(--bd4);
+          cursor: pointer;
+          &:first {
+            margin-left: 0;
+          }
+        }
+        & .counter {
+          width: 30px;
+          height: 30px;
+          margin-left: 4px;
+          border-radius: 50%;
+          border: 1px solid var(--bg4);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--fn1);
+          position: relative;
+          cursor: pointer;
+        }
+        .teamworker {
+          &-ul {
+            width: 218px;
+            min-height: 210px;
+            max-height: 500px;
+            overflow-y: auto;
+            // background-color: var(--bg3);
+            // backdrop-filter: blur(20px);
+            // border-radius: 5px;
+            // position: absolute;
+            // top: 40px;
+            // right: 0;
+            // z-index: 2;
+          }
+          &-li {
+            height: 50px;
+            border-bottom: 1px solid var(--bg1);
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            .worker-avatar {
+              position: relative;
+              img {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin: 0 8px 0 0;
+              }
+              .isOnline {
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                left: 15px;
+                top: 15px;
+                background: #07E81D;
+                &.notOnline {
+                  background: #9E9E9E;
+                }
+              }
+            }
+            .worker-msg {
+              width: 128px;
+              font-size: var(--size-12px);
+              flex-grow: 0;
+              flex-shrink: 0;
+              .name {
+                color: var(--fn1);
+              }
+              .email {
+                color: var(--fn3);
+                height: 14px;
+              }
+            }
+          }
+        }
+        .work-role {
+          width: 44px;
+          height: 17px;
+          margin: 0 0 0 8px;
+          position: relative;
+          .role-msg {
+            width: 44px;
+            height: 17px;
+            border-radius: 3px;
+            cursor: pointer;
+            line-height: 17px;
+            text-align: center;
+            font-size: 12px;
+            color: #fff;
+            background-color: #DF7B07;
+            &.isRead {
+              background-color: #888;
+            }
+            &.isOwner {
+              background-color: #2BA58F;
+            }
+            &.isAdmin {
+              background-color: #3A86FF;
+            }
+          }
+          .change-role {
+            width: 64px;
+            .role-item {
+              width: 100%;
+              height: 32px;
+              line-height: 32px;
+              border-radius: 3px;
+              margin-bottom: 8px;
+              cursor: pointer;
+              text-align: center;
+              color: var(--fn1);
+              &:hover {
+                background: #3A86FF;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+  
+      .invitation {
+        // width: 62px;
+        padding: 0 8px;
+        height: 30px;
+        border-radius: 5px;
+        margin-left: 16px;
+        background-color: #ff5522;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        white-space: nowrap;
+        cursor: pointer;
+        svg {
+          fill: #fff;
+        }
+        span{
+          padding-left: 6px;
+        }
+        &:hover{
+          // background-color: #ee6767;
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+  

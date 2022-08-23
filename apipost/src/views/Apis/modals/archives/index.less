@@ -1,0 +1,218 @@
+.div-archives-back{
+    height: 20px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    >span{
+      svg{
+        width: 12px;
+        height: 12px;
+        stroke: var(--fn1);
+      }
+    }
+    >svg{
+      width: 20px;
+      height: 20px;
+      padding: 5px;
+      box-sizing: border-box;
+      background-color:var(--bg4);
+      border-radius: 3px;
+      stroke: var(--fn1);
+      transform: rotate(180deg);
+      cursor: pointer;
+    }
+    span{
+      padding-left: 20px;
+      font-size: var(--size-16px);
+      font-weight: 600;
+    }
+  }
+  .archives-modal {
+  
+  
+    & .docpanel{
+      color: var(--fn1);
+      display: flex;
+      flex-direction: column;
+      .txt-tabtitle{
+        width: auto;
+        height: 25px;
+        padding: 0 10px;
+        margin-top: 24px;
+        text-align: center;
+        line-height: 25px;
+        border-radius: 3px;
+        background-color: var(--bg4);
+        float: left;
+        
+      }
+      .txt-container{
+        height: 455px;
+        margin-top: 24px;
+        border-radius: 5px;
+        padding: 16px;
+        overflow: hidden;
+        overflow-y: auto;
+        background-color: var(--bg2);
+      }
+  
+    }
+  
+  
+  
+    &-content {
+      overflow-y: auto;
+      text-align: left;
+      font-size: var(--size-12px);
+  
+      .treeheader{
+        margin-top: 24px;
+        height: 36px;
+        color: var(--fn1);
+        & .api-check-box{
+          border-radius: 3px;
+        }
+        &>svg{
+          stroke: var(--fn1);
+        }
+        .left{
+          height: 36px;
+          padding-left: 10px;
+          display: flex;
+          align-items: center;
+          float: left;
+        }
+        .right{
+            height: 36px;
+            float: right;
+            display: flex;
+            .button{
+                width: 118px;
+                display: flex;
+                margin-left: 10px;
+                
+                flex: 1;
+                height: 36px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                font-weight: 400;
+                font-size: var(--size-12px);
+                cursor: pointer;
+                &:hover{
+                    background-color: var(--bgr1);
+                }
+                &>svg{ 
+                  stroke: var(--fn1);
+                  transform: translateX(-10px)
+                }
+            }
+        }
+  
+      }
+  
+      .tree{
+        max-height: 400px;
+        overflow: hidden;
+        overflow-y: auto;
+        margin-top: 16px;
+        .api-post-tree{
+          background:none;
+          &>div{
+            height: auto !important;
+            width: 100% !important;
+          }
+  
+          .api-post-tree-node{
+            height: 36px;
+          }
+          .api-post-tree-node-icon{
+            &>svg{
+              fill: var(--fn1);
+            }
+          }
+          // .api-post-tree-node-indent {
+          //   display: none;
+          // }
+          .nodetitle{
+            flex: 1;
+            &>div{
+              max-width: 370px;
+              white-space:nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+          }
+          .nodetime{
+            width: 250px;
+            align-items: center;
+            font-size: var(--size-12px);
+            color: var(--fn3);
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            &>.api-btn{
+              width: 40px;
+              height: 25px;
+              margin-left: 18px;
+              border-radius: 5px;
+              border: none;
+              background-color: rgba(255,255,255,0.1);
+            }
+  
+          }
+        }
+      }
+    }
+  
+    .api-post-tabs {
+      margin-top: 24px;
+      .api-post-tabs-headitem{
+        width: auto;
+        min-width: 0;
+        height: 25px;
+        padding: 0 8px;
+        margin: 0 12px 0 0;
+        color: var(--fn1);
+        &.active{
+          background-color: var(--bg4);
+        }
+      }
+    }
+  
+    .archives-bg {
+      background-color: var(--bg2);
+      margin: 12px 0;
+      padding: 16px;
+      border-radius: 5px;
+      p{
+        padding: 5px;
+      }
+      .values{
+        padding:  10px;
+        word-wrap: break-word;
+      }
+    }
+  
+    .api-post-cell{
+      font-size: var(--size-12px);
+    }
+    .api-post-table-td-border{
+      padding: 6px 8px;
+      min-height: 40px;
+    }
+    .api-post-tabs-content{
+      margin-top: 10px;
+      .tab-content{
+        height: 460px;
+        overflow: hidden;
+        overflow-y: auto;
+      }
+  
+  
+    }
+  
+  
+  }
+  
