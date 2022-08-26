@@ -103,6 +103,9 @@ class contentApi {
       { type: "svgList", text: msg }, "*"
     );
   }
+  ajax () {
+
+  }
 }
 
 // 接收background.js传来的信息，转发给pageScript
