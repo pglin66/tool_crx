@@ -24,8 +24,8 @@
           </span>
           <span class="cover-item iconfont cover-item-line icon-shoucang1">
           </span>
-          <span data-login="true"
-                title="下载"
+          <span title="下载"
+                @click="downSvg(item)"
                 class="cover-item iconfont cover-item-line icon-xiazai">
           </span>
         </div>
@@ -46,7 +46,26 @@
   chrome.runtime.onMessage.addListener(msg => {
     state.list = msg.data;
   });
+  //下载svg
+  const downSvg = (data) => {
+    var blob = new Blob(['<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">' + data], { type: 'image/svg+xml' });
+    //将请求的blob数据转为可下载的url地址
+    let url = URL.createObjectURL(blob)
+    // 创建一个下载标签<a>
+    const aLink = document.createElement('a')
+    aLink.href = url
+    // 2.直接使用自定义文件名,设置下载文件名称
+    aLink.setAttribute('download', 'dome.svg')
+    document.body.appendChild(aLink)
+    // 模拟点击下载
+    aLink.click()
+    // 移除改下载标签
+    document.body.removeChild(aLink);
+  }
+  //svg 转png
+  const downPng = () => {
 
+  }
 
 
 </script>
